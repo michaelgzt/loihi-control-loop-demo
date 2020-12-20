@@ -1,2 +1,4 @@
-# loihi-control-loop-demo
-A demo for robotic control loop with Intel's Loihi neuromoprhic chip used in our papers
+# Robotic control loop with Intel's Loihi chip
+
+This package contains the control-loop demo that shows how to interact with Spiking Neural Networks (SNNs) on 
+Intel's Loihi neuromorphic chip during runtime for real-time robotic control.
