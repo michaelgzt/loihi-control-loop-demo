@@ -46,7 +46,7 @@ Record the number of spikes from the output layer.
 3. (1 Control Iteration = 100 Loihi steps) Inject spike probability to Loihi and generate Poisson spikes for the input layer.
 Record the number of spikes from the output layer.
 
-More details on how to use the demo can be found in this ipython notebook.
+More details on how to use the demo can be found in this [ipython notebook](https://github.com/michaelgzt/loihi-control-loop-demo/blob/main/loihi-control-loop-demo.ipynb).
 
 ## Acknowledgment ##
 
