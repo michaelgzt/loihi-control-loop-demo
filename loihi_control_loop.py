@@ -5,7 +5,7 @@ from loihi_network import LoihiNetwork
 
 
 def check_input_layer_axon_id_list(layer_dim=5,
-                                   input_core_list=[0, 1, 2, 3, 4],
+                                   input_core_list=[0, 0, 0, 0, 0],
                                    output_core_list=[0, 0, 0, 0, 0],
                                    snip_dir='./snip_spike'):
     """
@@ -21,6 +21,8 @@ def check_input_layer_axon_id_list(layer_dim=5,
     loihi_snn = LoihiNetwork(layer_dim, input_core_list, output_core_list)
     board, encoder_channel, decoder_channel = loihi_snn.setup_loihi_snn(layer_dim, layer_dim, snip_dir,
                                                                         print_axon=True)
+    board.startDriver()
+    board.disconnect()
 
 
 def run_loihi_spike_online_interaction(layer_dim=5,
@@ -145,9 +147,3 @@ def run_loihi_window_poisson_online_interaction(layer_dim=5,
     board.finishRun()
     board.disconnect()
 
-
-if __name__ == '__main__':
-    run_loihi_window_poisson_online_interaction()
-    # run_loihi_window_regular_online_interaction()
-    # run_loihi_spike_online_interaction()
-    # check_input_layer_axon_id_list()
